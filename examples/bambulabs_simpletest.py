@@ -18,9 +18,7 @@ import bambulabs as bl
 
 # Set up networking
 print("Connecting to AP...")
-wifi.radio.connect(
-    os.getenv("CIRCUITPY_WIFI_SSID"), os.getenv("CIRCUITPY_WIFI_PASSWORD")
-)
+wifi.radio.connect(os.getenv("CIRCUITPY_WIFI_SSID"), os.getenv("CIRCUITPY_WIFI_PASSWORD"))
 print(f"Connected to {os.getenv('CIRCUITPY_WIFI_SSID')}")
 print(f"My IP address: {wifi.radio.ipv4_address}")
 
@@ -59,4 +57,3 @@ else:
     # Print the entire JSON response
     print("--- Raw JSON ---")
     print(json.dumps(status.raw))
-
