@@ -201,7 +201,7 @@ class PrinterStatus:
             if isinstance(module, dict) and module.get("name") == "ota":
                 return module.get("sw_ver")
         return None
-
+        
 
 class BambuPrinter:
     """Connect to a Bambu Labs printer over MQTT and query its status.
@@ -211,7 +211,7 @@ class BambuPrinter:
     :param response_timeout: Seconds to wait for a printer response (default 10).
     """
 
-    def __init__(self, mqtt_client, serial_number, response_timeout=10):
+    def __init__(self, serial_number, response_timeout=10):
         pool = adafruit_connection_manager.get_radio_socketpool(wifi.radio)
         ssl_context = adafruit_connection_manager.get_radio_ssl_context(wifi.radio)
 
@@ -224,8 +224,7 @@ class BambuPrinter:
             socket_pool=pool,
             ssl_context=ssl_context,
             is_ssl=True,
-        )
-
+)
         self._mqtt = mqtt_client
         self._serial = serial_number
         self._response_timeout = response_timeout
