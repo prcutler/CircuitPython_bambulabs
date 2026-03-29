@@ -109,3 +109,5 @@ Contributing
 Contributions are welcome! Please read our `Code of Conduct
 <https://github.com/prcutler/CircuitPython_bambulabs/blob/HEAD/CODE_OF_CONDUCT.md>`_
 before contributing to help this project stay welcoming.
+
+This library was created with the assistance of Claude.  (I know, I know..)
