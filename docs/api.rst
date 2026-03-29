@@ -32,6 +32,7 @@ BambuPrinter
 .. autoclass:: bambulabs.BambuPrinter
     :members:
     :member-order: bysource
+    :no-index:
 
     **Connection**
 
@@ -52,6 +53,7 @@ PrinterStatus
 .. autoclass:: bambulabs.PrinterStatus
     :members:
     :member-order: bysource
+    :no-index:
 
     **Raw data**
 
