@@ -90,6 +90,20 @@ Or the following command to update an existing version:
 
     circup update
 
+Obtaining Your Printer Credentials and Save in settings.toml
+============================================================
+
+#. Login to `MakerWorld <https://makerworld.com/>`_.
+#. Open the dev-tools (F12 in most browsers) and select
+   ``Application > Cookies > https://makerworld.com``.
+#. Copy the ``token`` string and save it as ``BAMBU_ACCESS_TOKEN`` in ``settings.toml``.
+#. Access `https://makerworld.com/api/v1/design-user-service/my/preference
+   <https://makerworld.com/api/v1/design-user-service/my/preference>`_ and copy
+   ``uid`` as ``USER_ID``.
+#. Access `https://makerworld.com/api/v1/iot-service/api/user/bind
+   <https://makerworld.com/api/v1/iot-service/api/user/bind>`_ and copy
+   ``dev_id`` as ``DEVICE_ID``.
+
 Usage Example
 =============
 
