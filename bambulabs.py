@@ -27,10 +27,10 @@ Requires a Bambu Labs 3D printer and Bambu Labs Makerworld account.
 import json
 import os
 import time
-import wifi
+
 import adafruit_connection_manager
 import adafruit_minimqtt.adafruit_minimqtt as MQTT
-
+import wifi
 
 __version__ = "0.0.0+auto.0"
 __repo__ = "https://github.com/prcutler/CircuitPython_bambulabs.git"
@@ -230,8 +230,8 @@ class BambuPrinter:
         self._mqtt = mqtt_client
         self._serial = serial_number
         self._response_timeout = response_timeout
-        self._report_topic = "device/{}/report".format(serial_number)
-        self._request_topic = "device/{}/request".format(serial_number)
+        self._report_topic = f"device/{serial_number}/report"
+        self._request_topic = f"device/{serial_number}/request"
         self._last_response = None
 
         self._mqtt.on_connect = self._on_connect
