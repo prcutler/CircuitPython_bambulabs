@@ -35,26 +35,11 @@ import wifi
 __version__ = "0.0.0+auto.0"
 __repo__ = "https://github.com/prcutler/CircuitPython_bambulabs.git"
 
-
-pool = adafruit_connection_manager.get_radio_socketpool(wifi.radio)
-ssl_context = adafruit_connection_manager.get_radio_ssl_context(wifi.radio)
-
 # BAMBU MQTT settings - Bambu Cloud
 BAMBU_BROKER = os.getenv("BAMBU_BROKER")
 ACCESS_TOKEN = os.getenv("BAMBU_ACCESS_TOKEN")
 USER_ID = os.getenv("USER_ID")
 BAMBU_IP = os.getenv("BAMBU_IP")
-
-# Set up MQTT client
-mqtt_client = MQTT.MQTT(
-    broker=BAMBU_BROKER,
-    port=8883,
-    username=USER_ID,
-    password=ACCESS_TOKEN,
-    socket_pool=pool,
-    ssl_context=ssl_context,
-    is_ssl=True,
-)
 
 
 class PrinterStatus:
@@ -227,6 +212,20 @@ class BambuPrinter:
     """
 
     def __init__(self, mqtt_client, serial_number, response_timeout=10):
+        pool = adafruit_connection_manager.get_radio_socketpool(wifi.radio)
+        ssl_context = adafruit_connection_manager.get_radio_ssl_context(wifi.radio)
+
+        # Set up MQTT client
+        mqtt_client = MQTT.MQTT(
+            broker=BAMBU_BROKER,
+            port=8883,
+            username=USER_ID,
+            password=ACCESS_TOKEN,
+            socket_pool=pool,
+            ssl_context=ssl_context,
+            is_ssl=True,
+        )
+
         self._mqtt = mqtt_client
         self._serial = serial_number
         self._response_timeout = response_timeout
