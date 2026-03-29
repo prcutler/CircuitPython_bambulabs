@@ -30,7 +30,7 @@ Dependencies
 This driver depends on:
 
 * `Adafruit CircuitPython <https://github.com/adafruit/circuitpython>`_
-* `Adafruit Adafruit_CircuitPython_MiniMQTT <https://github.com/adafruit/Adafruit_CircuitPython_MiniMQTT/>`_
+* `Adafruit_CircuitPython_MiniMQTT <https://github.com/adafruit/Adafruit_CircuitPython_MiniMQTT/>`_
 
 Please ensure all dependencies are available on the CircuitPython filesystem.
 This is easily achieved by downloading
@@ -109,13 +109,13 @@ Obtaining Your Printer Credentials and Save in settings.toml
 
 You will need a ``settings.toml`` file with the following to connect via MQTT:
 
-CIRCUITPY_WIFI_SSID = "your_wifi_ssid"
-CIRCUITPY_WIFI_PASSWORD = "your_wifi_password"
-BAMBU_BROKER = os.getenv("BAMBU_BROKER")
-ACCESS_TOKEN = os.getenv("BAMBU_ACCESS_TOKEN")
-USER_ID = os.getenv("USER_ID")
-DEVICE_ID = "your_printer_serial_number"
-BAMBU_IP = "your_printer_IP_address"
+* CIRCUITPY_WIFI_SSID = "your_wifi_ssid"
+* CIRCUITPY_WIFI_PASSWORD = "your_wifi_password"
+* BAMBU_BROKER = os.getenv("BAMBU_BROKER")
+* ACCESS_TOKEN = os.getenv("BAMBU_ACCESS_TOKEN")
+* USER_ID = os.getenv("USER_ID")
+* DEVICE_ID = "your_printer_serial_number"
+* BAMBU_IP = "your_printer_IP_address"
 
 Misc. information
 =================
