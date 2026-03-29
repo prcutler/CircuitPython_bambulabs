@@ -11,6 +11,15 @@ Obtaining Your Printer Credentials and Save in settings.toml
 #. Access `https://makerworld.com/api/v1/iot-service/api/user/bind
    <https://makerworld.com/api/v1/iot-service/api/user/bind>`_ and copy
    ``dev_id`` as ``DEVICE_ID``.
+#. On your printer, go to Settings and obtain the IP address and copy it as
+   ``BAMBU_IP``.
+
+Misc. information
+=================
+
+This library queries your Bambu Labs 3D printer via the Bambu Cloud using MQTT 5.0. 
+Local mode is not supported due to it using MQTT 3.1.1. Issuing commands to your 
+Bambu printer is out of scope for this library.
 
 API Reference
 #############
