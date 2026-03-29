@@ -150,7 +150,7 @@ Usage Example
 
     device_id = os.getenv("DEVICE_ID")
 
-    printer = bl.BambuPrinter(bl.mqtt_client, device_id)
+    printer = bl.BambuPrinter(bl.BambuPrinter.__init__, device_id)
     printer.connect()
 
     status = printer.pushall()
