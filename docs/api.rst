@@ -17,8 +17,8 @@ Obtaining Your Printer Credentials and Save in settings.toml
 Misc. information
 =================
 
-This library queries your Bambu Labs 3D printer via the Bambu Cloud using MQTT 5.0. 
-Local mode is not supported due to it using MQTT 3.1.1. Issuing commands to your 
+This library queries your Bambu Labs 3D printer via the Bambu Cloud using MQTT 5.0.
+Local mode is not supported due to it using MQTT 3.1.1. Issuing commands to your
 Bambu printer is out of scope for this library.
 
 API Reference

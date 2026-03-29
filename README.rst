@@ -43,7 +43,6 @@ Installing from PyPI
 .. note:: This library is not available on PyPI yet. Install documentation is included
    as a standard element. Stay tuned for PyPI availability!
 
-.. todo:: Remove the above note if PyPI version is/will be available at time of release.
 
 On supported GNU/Linux systems like the Raspberry Pi, you can install the driver locally `from
 PyPI <https://pypi.org/project/circuitpython-bambulabs/>`_.
@@ -121,8 +120,8 @@ BAMBU_IP = "your_printer_IP_address"
 Misc. information
 =================
 
-This library queries your Bambu Labs 3D printer via the Bambu Cloud using MQTT 5.0. 
-Local mode is not supported due to it using MQTT 3.1.1. Issuing commands to your 
+This library queries your Bambu Labs 3D printer via the Bambu Cloud using MQTT 5.0.
+Local mode is not supported due to it using MQTT 3.1.1. Issuing commands to your
 Bambu printer is out of scope for this library.
 
 Usage Example
