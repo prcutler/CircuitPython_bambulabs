@@ -30,6 +30,7 @@ Dependencies
 This driver depends on:
 
 * `Adafruit CircuitPython <https://github.com/adafruit/circuitpython>`_
+* `Adafruit Adafruit_CircuitPython_MiniMQTT <https://github.com/adafruit/Adafruit_CircuitPython_MiniMQTT/>`_
 
 Please ensure all dependencies are available on the CircuitPython filesystem.
 This is easily achieved by downloading
