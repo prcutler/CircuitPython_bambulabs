@@ -201,7 +201,7 @@ class PrinterStatus:
             if isinstance(module, dict) and module.get("name") == "ota":
                 return module.get("sw_ver")
         return None
-        
+
 
 class BambuPrinter:
     """Connect to a Bambu Labs printer over MQTT and query its status.
@@ -224,7 +224,7 @@ class BambuPrinter:
             socket_pool=pool,
             ssl_context=ssl_context,
             is_ssl=True,
-)
+        )
         self._mqtt = mqtt_client
         self._serial = serial_number
         self._response_timeout = response_timeout
